@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Kellee's Cool Website </title>
+    <style>
+        body {
+            background: rgb(254, 229, 245);
+            color: rgb(45, 45, 45);
+            padding: 10px;
+            font-family: arial;
+        }
+
+        #all-contents {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* navigation menu */
+        nav {
+            background: rgb(255, 135, 223);
+            margin: 0 auto;
+            bottom: 20px;
+            display: flex;
+            padding: 10px;
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            flex: 1;
+            margin: 0;
+        }
+
+        #nav-ul {
+            list-style-image: none;
+        }
+
+        .nav-li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(7, 6, 6);
+        }
+
+        /* main container area beneath menu */
+        main {
+            background: rgb(255, 255, 255);
+            display: flex;
+        }
+
+        .sidebar {
+            margin-right: 25px;
+            padding: 10px;
+        }
+
+        .sidebar-img {
+            width: 200px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 15px;
+        }
+
+        #interests {
+            border: 4px rgb(77, 0, 78) ridge;
+            padding: 8px;
+        }
+
+        h2,
+        h3 {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- all content goes here-->
+    <div id="all-contents">
+        <nav>
+            <h1>All About Kellee</h1>
+            <ul id="nav-ul">
+                <li class="nav-li">
+                    <a href="index.html"> Home</a>
+                </li>
+                <li class="nav-li">
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <!--sidebar section-->
+            <div class="sidebar">
+                <img class="sidebar-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoTn0uChnfd1r-gKJMQzYeZiSlK9tBek0Fl_h-9ZaUXvNvTTSM9LH2Kj2luzWxtkQHZ9s&usqp=CAU">
+            </div>
+            <div class="content">
+                <!-- content section-->
+                <h2>Kellee V. Jackson</h2>
+                <p> Student at St. Katharine Drexel Prep - Senior c/o 23</p>
+                <!--interests section-->
+                <div id="interests">
+                    <h3>Interests</h3>
+                    <ul>
+                        <li>Reading Books</li>
+                        <li>Listening to Music</li>
+                        <li>Playing Volleyball</li>
+                        <li>ALL THINGS PINK</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</body>
+
+</html>
