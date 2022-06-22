@@ -32,11 +32,9 @@ var init = function (window) {
         }
 
         // TODO 3 / 7 : Call the drawCircle() function 
+       for (var i = 0; i < 100; i++) {
         drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
+       }
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -63,8 +61,14 @@ var init = function (window) {
            game.checkCirclePosition(circles[3]);
            game.checkCirclePosition(circles[4]);
 
-            // TODO 9 : Iterate over the array
            
+            
+            // code to repeat using eachValue
+         }
+
+            // TODO 9 : Iterate over the array
+            for (var i = 0; i < circles.length; i++) {
+                var eachValue = circles[i];
             
         }
     
@@ -72,6 +76,13 @@ var init = function (window) {
         This Function should check the position of a circle that is passed to the 
         Function. If that circle drifts off the screen, this Function should move
         it to the opposite side of the screen.
+
+
+        0 is on the left
+        canvas.width is on the right
+
+        0 is on the bottom
+        canvas.height is on the top
         */
         game.checkCirclePosition = function(circle) {
 
@@ -81,8 +92,23 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
+            // if the circle has gone past the Left side of the screen then place it on the Right
+            if ( circle.x < 0) {
+                circle.x = canvas.width;
+            }
 
+            // if the circle has gone past the top side of the screen then place it on the bottom
+            if (circle.y < 0) {
+                circle.y = canvas.height;
+            }
+
+            // if the circle has gone past the bottom side of the screen then place it on the top
+            if (circle.y > canvas.height) {
+                circle.y = 0;
+            }
+
+            var rightEdge = circle.x + circle.radius;
+            var leftEdge = circle.y + circle.radius;
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
